@@ -1,0 +1,22 @@
+Pool Id us-east-2_LYylUqRNV
+Pool ARN arn:aws:cognito-idp:us-east-2:865370505468:userpool/us-east-2_LYylUqRNV
+
+26tny1tlyc.execute-api.us-east-2.amazonaws.com
+
+App client Amos-client
+ID 5tvp0pnhdelpvjj0i5up1b7bpi
+
+identidy pool id: us-east-2:34e05b9e-9cc5-4949-bff8-466454cce36f
+
+npx aws-api-gateway-cli-test \
+--username='no-reply2@amos.com' \
+--password='@Amos1234' \
+--user-pool-id='us-east-2_LYylUqRNV' \
+--app-client-id='5tvp0pnhdelpvjj0i5up1b7bpi' \
+--cognito-region='us-east-2' \
+--identity-pool-id='us-east-2:34e05b9e-9cc5-4949-bff8-466454cce36f' \
+--invoke-url='http://26tny1tlyc.execute-api.us-east-2.amazonaws.com/prod' \
+--api-gateway-region='us-east-2' \
+--path-template='/notes' \
+--method='POST' \
+--body='{"content":"hello world","attachment":"hello.jpg"}'

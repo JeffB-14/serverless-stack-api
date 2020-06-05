@@ -1,4 +1,6 @@
 import AWS from "aws-sdk";
+const credentials = new AWS.SharedIniFileCredentials({profile: 'amos'});
+AWS.config.update({ region: "us-east-2", credentials: credentials });
 
 const client = new AWS.DynamoDB.DocumentClient();
 
